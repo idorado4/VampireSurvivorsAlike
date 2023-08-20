@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Stats/Player", fileName = "PlayerStats")]
 
-public class PlayerStats : CharacterStatsSO
+public class PlayerStatsSO : CharacterStatsSO
 {
-    public List<WeaponSO> weapons;
+    
 }

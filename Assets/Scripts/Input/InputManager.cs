@@ -31,4 +31,9 @@ public class InputManager : MonoBehaviour, IInputSystem
     {
         return defaultInputActions.Player.Move.ReadValue<Vector2>();
     }
+
+    public bool Test()
+    {
+        return defaultInputActions.Player.Test.triggered;
+    }
 }

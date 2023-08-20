@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, IDamageable
 {
-    // Start is called before the first frame update
-    void Start()
+    public int Health { get; set; }
+
+    public void Damage(int damage)
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Damage()
+    public void Die()
     {
         
     }

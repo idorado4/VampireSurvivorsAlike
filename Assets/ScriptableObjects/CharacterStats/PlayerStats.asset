@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74d202520c936ed43b2c175fd7d0030c, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
+  ID: 0
+  hp: 100
   speed: 100
-  weapons:
-  - {fileID: 11400000, guid: 27dbfac8ab980724583fc6790640ba2c, type: 2}
