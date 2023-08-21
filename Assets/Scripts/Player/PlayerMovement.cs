@@ -5,21 +5,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private PlayerStatsSO stats;
-
-    [SerializeField] private List<Weapon> weapons;
+    [SerializeField] private PlayerStats playerStats;
     private Rigidbody2D _rb;
     public Vector2 MovementDirection { get; private set; }
     public Vector2 LastMovementDirection { get; private set; }
-
+   
+ 
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        foreach (var weapon in weapons)
-        {
-            weapon.Unlock(this);
-        }
+      
 
         LastMovementDirection = Vector2.right;
     }
@@ -35,6 +31,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rb.velocity = MovementDirection * (stats.speed * Time.fixedDeltaTime);
+        _rb.velocity = MovementDirection * (playerStats.Speed * Time.fixedDeltaTime);
     }
 }

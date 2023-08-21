@@ -1,22 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Weapon", fileName = "WeaponData")]
+[CreateAssetMenu(menuName = "Weapon", fileName = "WeaponData", order = 1)]
 public class WeaponDataSO : ScriptableObject
 {
     [Header("Generic Properties")]
     public int id;
     public WeaponType type;
-    public string name;
+    public string weaponName;
     public Projectile prefab;
     public int maxLevel;
     public float cooldown;
     public int maxProjectiles;
     
     [Header("Behaviour Properties")]
-    public int damage;
+    public float damage;
     public float dmgRange;
     public float speed; //Movement or rotation
-    public float pierce; //How many enemies can the weapon go through
+    public int pierce; //How many enemies can the weapon go through
 }

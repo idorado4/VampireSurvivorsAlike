@@ -8,6 +8,7 @@ public class ExperienceItem : MonoBehaviour, ICollectible
 
     public void Collect(PlayerStats playerStats)
     {
+        //TODO Hacer que se mueva hasta el player con una corutina en vez de desaparecer directamente 
         playerStats.IncreaseExperience(experienceGranted);
         Destroy(gameObject);
     }

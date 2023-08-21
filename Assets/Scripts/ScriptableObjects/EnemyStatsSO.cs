@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Stats/Enemy", fileName = "EnemyStats")]
 
-public class EnemyStats : CharacterStatsSO
+public class EnemyStatsSO : CharacterStatsSO
 {
     [Header("Custom Enemy Stats")]
     public int damage;

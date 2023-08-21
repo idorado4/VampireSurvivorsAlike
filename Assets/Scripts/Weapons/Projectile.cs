@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     protected Rigidbody2D _rb;
 
-    protected int damage;
+    protected float damage;
     protected float dmgRange;
     protected float speed;
     protected float pierce;
@@ -16,17 +16,16 @@ public class Projectile : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    public virtual void Init(WeaponDataSO data)
+    public virtual void Init(Weapon.ProjectileStats stats, PlayerStats playerStats)
     {
-        damage = data.damage;
-        speed = data.speed;
-        pierce = data.pierce;
-        dmgRange = data.dmgRange;
+        damage = stats.damage * playerStats.AttackDmg;
+        speed = stats.speed * playerStats.ProjectileSpeed;
+        pierce = stats.pierce;
+        dmgRange = stats.dmgRange;
     }
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("trigger enter");
         if (!other.TryGetComponent(out IDamageable iDamageable)) return;
         iDamageable.Damage(damage);
         pierce--;

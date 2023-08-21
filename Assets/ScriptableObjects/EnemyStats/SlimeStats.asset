@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SlimeStats
   m_EditorClassIdentifier: 
   ID: 1
-  hp: 3
-  speed: 1
-  damage: 0
+  maxHealth: 3
+  speed: 0.7
+  projectileSpeed: 0
+  damage: 1

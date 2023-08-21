@@ -7,5 +7,8 @@ using UnityEngine;
 public class PlayerStatsSO : CharacterStatsSO
 {
     [Header("Custom Player Stats")]
-    public float might;
+    public float recovery;
+    public float attackDmg;
+    public float collectorRadius;
+    public Weapon initialWeapon;
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, IDamageable
 {
-    [SerializeField] protected EnemyStats stats;
+    [SerializeField] protected EnemyStatsSO statsSo;
     [SerializeField] protected DropRateManager dropRateManager;
 
     private Transform _playerTransform;
@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour, IDamageable
     protected float _speed;
     protected int _damage;
 
+    public delegate void EnemyKilled();
+
+    public EnemyKilled OnEnemyKilled;
 
     protected void Update()
     {
@@ -21,14 +24,12 @@ public class Enemy : MonoBehaviour, IDamageable
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("trigger enter");
         if (!other.TryGetComponent(out IDamageable iDamageable)) return;
         StartCoroutine(nameof(DamagePlayer), iDamageable);
     }
 
     protected void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("trigger exit");
         if (!other.TryGetComponent(out IDamageable iDamageable)) return;
         StopCoroutine(nameof(DamagePlayer));
     }
@@ -36,9 +37,9 @@ public class Enemy : MonoBehaviour, IDamageable
     public virtual void Init(Transform playerTransform)
     {
         _playerTransform = playerTransform;
-        _health = stats.health;
-        _speed = stats.speed;
-        _damage = stats.damage;
+        _health = statsSo.maxHealth;
+        _speed = statsSo.speed;
+        _damage = statsSo.damage;
     }
 
     protected void Move()
@@ -58,6 +59,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void Die()
     {
+        OnEnemyKilled?.Invoke();
         dropRateManager.OnDie();
         Destroy(gameObject);
     }

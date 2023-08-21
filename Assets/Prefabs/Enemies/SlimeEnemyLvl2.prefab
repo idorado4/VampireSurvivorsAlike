@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -98495323, guid: a3264826a5f43784781d641e7c00de4f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.4434402, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7919384064348502296}
   - component: {fileID: 1037884186329801136}
   m_Layer: 6
-  m_Name: SlimeEnemy
+  m_Name: SlimeEnemyLvl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac3c82cf0f4ee649891e2b171d4844a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsSo: {fileID: 11400000, guid: e7b13dbfed1337f43a14626544869136, type: 2}
+  statsSo: {fileID: 11400000, guid: a8ffca6c830c99149b536ac1332fb1b5, type: 2}
   dropRateManager: {fileID: 1037884186329801136}
 --- !u!114 &1037884186329801136
 MonoBehaviour:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drops:
-  - prefab: {fileID: 4037511343934082728, guid: a44914a89dfe16b49968e644d044bad7, type: 3}
+  - prefab: {fileID: 8645427048208923559, guid: f67855d773ab05846983f490cd622793, type: 3}
     rate: 35
   - prefab: {fileID: 7710263300066756713, guid: 1391f7d5581449c40af5b225b63bc6fc, type: 3}
     rate: 35

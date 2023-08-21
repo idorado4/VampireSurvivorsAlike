@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   type: 0
-  name: Arrow
+  weaponName: 
   prefab: {fileID: 6923146046484459621, guid: 0bd37fea21113c94c9c0151f7140e4f0, type: 3}
-  maxLevel: 1
+  maxLevel: 3
   cooldown: 1
   maxProjectiles: 1
   damage: 1

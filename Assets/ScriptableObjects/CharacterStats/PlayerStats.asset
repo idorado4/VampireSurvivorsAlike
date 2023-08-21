@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   ID: 0
-  health: 50
   maxHealth: 100
   speed: 100
-  recovery: 0
-  projectileSpeed: 0
-  might: 0
+  projectileSpeed: 1
+  recovery: 1
+  attackDmg: 1
+  collectorRadius: 1
+  initialWeapon: {fileID: 4217336996899106323, guid: e20cfcaaca1a07745921002963c1a8d4, type: 3}
