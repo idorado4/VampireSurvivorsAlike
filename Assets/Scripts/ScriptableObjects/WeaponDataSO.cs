@@ -8,6 +8,7 @@ public class WeaponDataSO : ScriptableObject
     public WeaponType type;
     public string weaponName;
     public Projectile prefab;
+    public Sprite uiIcon;
     public int maxLevel;
     public float cooldown;
     public int maxProjectiles;

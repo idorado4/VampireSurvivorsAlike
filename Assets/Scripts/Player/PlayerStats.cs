@@ -24,6 +24,10 @@ public class PlayerStats : MonoBehaviour, IDamageable
     public delegate void IncreaseCollectorRadius(float amount);
 
     public IncreaseCollectorRadius OnIncreaseCollectorRadius;
+    
+    public delegate void UpgradeWeaponHandler();
+
+    public UpgradeWeaponHandler OnLevelUp;
 
     private void Awake()
     {
@@ -50,6 +54,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
         _level++;
         _experience -= _experienceCap;
         _experienceCap += _experienceCapIncrease;
+        OnLevelUp?.Invoke();
     }
 
     public void RestoreHealth(float amount)
@@ -83,7 +88,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
         var playerTransform = transform;
         var spawnedWeapon = Instantiate(weapon, playerTransform.position, Quaternion.identity, playerTransform);
         spawnedWeapon.Unlock(this);
-        _inventorySystem.AddWeapon(weapon);
+        _inventorySystem.AddWeapon(spawnedWeapon);
     }
     
     public void AddAbility(AbilityItem abilityItem)

@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class MagicCircleWeapon : Weapon
 {
-   
+    public override void LevelUp()
+    {
+        
+    }
 }

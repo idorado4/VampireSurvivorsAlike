@@ -8,4 +8,9 @@ public class BootsItem : AbilityItem
     {
         _playerStats.Speed *= 1 + abilityData.multiplier / 100;
     }
+
+    public override void LevelUp()
+    {
+        Level++;
+    }
 }

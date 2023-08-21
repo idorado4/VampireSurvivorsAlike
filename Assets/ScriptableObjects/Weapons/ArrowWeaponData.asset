@@ -16,6 +16,7 @@ MonoBehaviour:
   type: 0
   weaponName: 
   prefab: {fileID: 6923146046484459621, guid: 0bd37fea21113c94c9c0151f7140e4f0, type: 3}
+  uiIcon: {fileID: 1511194045, guid: bc071d35995e8054094a9674a3b85e26, type: 3}
   maxLevel: 3
   cooldown: 1
   maxProjectiles: 1

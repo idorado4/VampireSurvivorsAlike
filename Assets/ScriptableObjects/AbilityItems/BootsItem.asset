@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 50
   maxLevel: 5
+  uiIcon: {fileID: 21300000, guid: 565a0be2505077841bf7964ea40453ca, type: 3}

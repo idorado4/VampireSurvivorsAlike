@@ -30,7 +30,7 @@ public class ArrowWeapon : Weapon
     public override void Unlock(PlayerStats playerStats)
     {
         base.Unlock(playerStats);
-        _currentLevelUpgrade = upgrades[Level];
+        _currentLevelUpgrade = upgrades[Level - 1];
     }
 
     public override void Use()
@@ -49,10 +49,11 @@ public class ArrowWeapon : Weapon
 
     public override void LevelUp()
     {
-        base.LevelUp();
+        if (Level >= _maxLevel) return;
+        Level++;
         _projectileStats.damage *= 1 + _currentLevelUpgrade.damage / 100;
         _projectileStats.speed *= 1 + _currentLevelUpgrade.speed / 100;
         _projectileStats.pierce += _currentLevelUpgrade.pierce;
-        _currentLevelUpgrade = upgrades[Level];
+        _currentLevelUpgrade = upgrades[Level - 1];
     }
 }

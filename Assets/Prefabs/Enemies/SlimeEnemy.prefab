@@ -210,6 +210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drops:
   - prefab: {fileID: 4037511343934082728, guid: a44914a89dfe16b49968e644d044bad7, type: 3}
-    rate: 35
+    rate: 100
   - prefab: {fileID: 7710263300066756713, guid: 1391f7d5581449c40af5b225b63bc6fc, type: 3}
     rate: 35
