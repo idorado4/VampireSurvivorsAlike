@@ -7,7 +7,7 @@ using UnityEngine.Pool;
 public abstract class Weapon : MonoBehaviour
 {
     public WeaponDataSO data;
-    protected PlayerController Player;
+    protected PlayerMovement Player;
     private int _level;
     private int _maxLevel;
     private float LastTimeUsed { get; set; }
@@ -25,7 +25,7 @@ public abstract class Weapon : MonoBehaviour
         CanBeUsed = false;
     }
     
-    public virtual void Unlock(PlayerController player)
+    public virtual void Unlock(PlayerMovement player)
     {
         Player = player;
         LastTimeUsed = Time.time;

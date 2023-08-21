@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class CharacterStatsSO : ScriptableObject
 {
+    [Header("Generic Character Stats")]
     public int ID;
-    public int hp;
+    public float health;
+    public float maxHealth;
     public float speed;
+    public float recovery;
+    public float projectileSpeed;
 }

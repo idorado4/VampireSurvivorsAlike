@@ -5885,48 +5885,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_dungeon_v1.1_284
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 736b8e3f8fce4814fab09cf969537984
-      internalID: -183842738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tiles_dungeon_v1.1_285
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a95154761823eb4eaa469812cd5d155
-      internalID: 518288146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tiles_dungeon_v1.1_286
       rect:
         serializedVersion: 2
@@ -6284,13 +6242,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_dungeon_v1.1_303
+      name: box
       rect:
         serializedVersion: 2
         x: 272
         y: 80
         width: 16
-        height: 16
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6305,13 +6263,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_dungeon_v1.1_304
+      name: broken_box
       rect:
         serializedVersion: 2
         x: 288
         y: 80
         width: 16
-        height: 16
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7386,6 +7344,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      box: 941612697
+      broken_box: -1385893720
       table: 1772643837
       tiles_dungeon_v1.1_0: 819548200
       tiles_dungeon_v1.1_1: -1000699872
@@ -7614,8 +7574,6 @@ TextureImporter:
       tiles_dungeon_v1.1_300: -1102939368
       tiles_dungeon_v1.1_301: 769340083
       tiles_dungeon_v1.1_302: 1391001554
-      tiles_dungeon_v1.1_303: 941612697
-      tiles_dungeon_v1.1_304: -1385893720
       tiles_dungeon_v1.1_305: 1476294649
       tiles_dungeon_v1.1_306: -1681725826
       tiles_dungeon_v1.1_307: -310154506

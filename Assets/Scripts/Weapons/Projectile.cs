@@ -18,7 +18,6 @@ public class Projectile : MonoBehaviour
 
     public virtual void Init(WeaponDataSO data)
     {
-        Debug.Log("Projectile Init");
         damage = data.damage;
         speed = data.speed;
         pierce = data.pierce;

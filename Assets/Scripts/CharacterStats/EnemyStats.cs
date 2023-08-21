@@ -6,4 +6,6 @@ using UnityEngine;
 
 public class EnemyStats : CharacterStatsSO
 {
+    [Header("Custom Enemy Stats")]
+    public int damage;
 }

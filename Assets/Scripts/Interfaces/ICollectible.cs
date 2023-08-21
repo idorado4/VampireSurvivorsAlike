@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDamageable
+public interface ICollectible
 {
-    void Damage(float dmg);
-    void Die();
+    void Collect(PlayerStats playerStats);
 }

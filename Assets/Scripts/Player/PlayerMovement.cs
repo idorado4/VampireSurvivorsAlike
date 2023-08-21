@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour, IDamageable
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerStatsSO stats;
 
@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour, IDamageable
     public Vector2 MovementDirection { get; private set; }
     public Vector2 LastMovementDirection { get; private set; }
 
-    public int Health { get; set; }
 
     private void Awake()
     {
@@ -22,7 +21,6 @@ public class PlayerController : MonoBehaviour, IDamageable
             weapon.Unlock(this);
         }
 
-        Health = stats.hp;
         LastMovementDirection = Vector2.right;
     }
 
@@ -30,11 +28,6 @@ public class PlayerController : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
-        if (InputManager.Instance.Test())
-        {
-        }
-
-
         MovementDirection = InputManager.Instance.GetMovement();
         if (MovementDirection != Vector2.zero)
             LastMovementDirection = MovementDirection;
@@ -43,16 +36,5 @@ public class PlayerController : MonoBehaviour, IDamageable
     private void FixedUpdate()
     {
         _rb.velocity = MovementDirection * (stats.speed * Time.fixedDeltaTime);
-    }
-
-
-    public void Damage(int dmg)
-    {
-        Health -= dmg;
-    }
-
-    public void Die()
-    {
-        Debug.Log("Die");
     }
 }

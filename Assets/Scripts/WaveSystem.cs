@@ -1,18 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private PlayerMovement _player;
+    [SerializeField] private SlimeEnemy slime;
+    
+    private void Start()
     {
-        
+        var clone = Instantiate(slime);
+        clone.Init(_player.transform);
     }
 }

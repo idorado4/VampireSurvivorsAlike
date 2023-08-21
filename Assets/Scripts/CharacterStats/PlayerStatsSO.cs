@@ -6,5 +6,6 @@ using UnityEngine;
 
 public class PlayerStatsSO : CharacterStatsSO
 {
-    
+    [Header("Custom Player Stats")]
+    public float might;
 }
