@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InventorySystem : MonoBehaviour
 {
-    [SerializeField] private int maxWeapons;
+    /*[SerializeField] private int maxWeapons;
     [SerializeField] private int maxAbilities;
     private List<Weapon> _weapons;
     [SerializeField] private List<Image> _weaponUIImages;
@@ -45,5 +45,5 @@ public class InventorySystem : MonoBehaviour
             if (!ReferenceEquals(ability, abilityItem)) continue;
             ability.LevelUp();
         }
-    }
+    }*/
 }

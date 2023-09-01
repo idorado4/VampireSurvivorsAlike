@@ -6,3 +6,8 @@ public enum WeaponType {
     Arrow,
     FireBall
 }
+
+public enum ProjectileType {
+    Arrow,
+    FireBall
+}

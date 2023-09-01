@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 909617896554863326}
-  - component: {fileID: 4217336996899106323}
+  - component: {fileID: 5793052346802351233}
   m_Layer: 0
   m_Name: ArrowWeapon
   m_TagString: Untagged
@@ -30,9 +30,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4217336996899106323
+--- !u!114 &5793052346802351233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,14 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa14eb0c9ab55fc4ca40fac6fefd853e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 3c5793b8c254bd54fbcbef6a6b66ced1, type: 2}
-  upgrades:
-  - damage: 50
-    speed: 20
-    pierce: 1
-  - damage: 50
-    speed: 10
-    pierce: 1
-  - damage: 50
-    speed: 5
-    pierce: 1
+  _statsSO: {fileID: 11400000, guid: 3c5793b8c254bd54fbcbef6a6b66ced1, type: 2}

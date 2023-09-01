@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicCircleWeapon : Weapon
+public class MagicCircleWeapon : WeaponController
 {
-    public override void LevelUp()
+    protected override void Shoot()
     {
-        
     }
 }

@@ -8,11 +8,7 @@ public class PlayerCollector : MonoBehaviour
     [SerializeField] private PlayerStats playerStats;
     [SerializeField] private CircleCollider2D col;
 
-    private void Awake()
-    {
-        playerStats.OnIncreaseCollectorRadius += SetCollectorRadius;
-    }
-
+   
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.TryGetComponent(out ICollectible collectible)) return;
